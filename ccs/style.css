@@ -1,0 +1,447 @@
+/*Paleta de colores:
+#2b4560 Azul Oscuro
+#2f6d80 Azul mas claro
+#6aa4b0 Azul claro
+#e1e7e0 Marfil*/
+
+
+/*Reset CCS*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+
+
+/*BODY*/ 
+
+html {
+    height: 100%;
+}
+main {
+
+    flex: 1; 
+}
+
+body{
+    background-color:#e1e7e0 ;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: "Quicksand", sans-serif;
+}
+.titulos {
+    color:#2f6d80 ;
+    font-size: 33px;
+    margin: 20px;
+    text-transform: uppercase ;
+    font-family: "Montserrat", sans-serif;
+}
+h1{
+    color:#2f6d80 ;
+    font-size: 36px;
+    margin: 6px;
+
+}
+h2{
+    color:#2b4560;
+    font-size: 30px;
+    margin: 20px;
+    font-family: "Montserrat", sans-serif;
+
+}
+h3{
+    color:#2b4560;
+    font-size: 27px;
+    margin: 10px;
+}
+h4{
+    color:#2b4560;
+    font-size: 20px;
+    margin: 10px; 
+    text-decoration:solid;
+    font-style: italic;
+}
+p{
+    color:#2b4560;
+    font-size: 18px;
+    margin: 20px
+}
+/*HEADER*/
+
+header {
+   background-color:#2b4560 ; 
+   display: flex;
+   flex-direction:row;
+   justify-content:space-between;  
+   align-items: center;
+   min-height: 60px;
+   box-sizing: border-box;
+   padding: 10px 0;
+}
+
+header img {
+    height: 100%;
+    max-height: 60px;
+    width: auto;
+    object-fit: contain;
+    margin: 0 15px;
+}
+header ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items:center;
+    height: 100%;   
+    margin: 0;
+    padding: 0; 
+}
+header ul li {
+    white-space: nowrap;
+    padding: 0 12px;
+}
+header a{
+    color: #e1e7e0 ;
+     text-decoration: none;
+     font-weight: bold;
+}
+
+nav{
+    width: 50%;
+    margin-right: 9px;
+}
+.menu{
+    font-size:15px;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: #e1e7e0;
+    padding: 0 15px;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+/*RESPONSIVE HAMBURGUESA*/
+@media (max-width: 768px) {
+    nav {
+        display: none; /* ocultamos el nav real */
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    header {
+        justify-content: space-between;
+    }
+}
+
+/*MAIN*/
+
+/*MAIN INICIO*/
+
+/*Banner*/
+
+.contenedor-grid{
+    display: grid;
+    grid-template-areas:
+    "banner banner banner"
+    "titulo imagen imagen"
+    "texto imagen imagen";
+    grid-template-columns: 50% 25% 25%;
+    grid-template-rows:auto auto auto;
+    padding: 0;
+    gap:0 ;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 0;
+   
+}
+    
+
+.grid-banner{
+    grid-area: banner;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.grid-titulo{
+    grid-area: titulo;
+    margin: 30px;
+}
+.grid-imagen{
+    grid-area: imagen;
+    grid-row: span 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100% ;
+    overflow: hidden;
+    
+}
+
+.grid-texto{
+    grid-area: texto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px;
+
+}
+
+.grid-banner img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.grid-imagen img{
+    width: auto;
+    max-width:100%;
+    height: 100%;
+    border-radius: 9px;
+    object-fit: cover;
+    margin:0;
+}
+
+@media (max-width: 768px) {
+  .contenedor-grid {
+    grid-template-areas:
+      "banner"
+      "titulo"
+      "imagen"
+      "texto";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .grid-titulo, .grid-texto{
+    text-align: center;
+    align-items: center;
+  }
+  .grid-imagen {
+    justify-content: center;
+  }
+}
+
+
+/*MAIN INFORMACION*/
+
+.banner {
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+/*libros*/ 
+
+.libros{
+  display: flex;
+  flex-wrap:wrap;
+  text-align: center;
+  margin: 20px;
+  gap: 20px;
+}
+.libros h3{
+    color: #e1e7e0;
+    font-size: 18px;
+}
+.libros h4{
+    color: #e1e7e0;
+    font-size: 16px;
+}
+.libros a {
+    color:#e1e7e0
+}
+.libros p{
+    color: #e1e7e0;
+    font-size: 14px;
+    
+}
+.libros img{
+    width: 200px;       
+    height: 200px;      
+    object-fit: fill;  
+    border-radius: 8px; 
+}
+.libro1, .libro2, .libro3{
+justify-content: center;
+align-items: center;
+background-color: #2b4560;
+border-radius: 20px;
+flex: 1 1 200px;
+max-width: 300px;
+}
+
+/*MIS TRABAJOS*/
+
+.produccionmusical li {
+    list-style: circle;
+    margin-left:70px ;
+    color:#2b4560;
+    font-size: 18px;
+}
+.produccionmusical{
+    margin-bottom: 30px;
+}
+.produccionmusical h3{
+    margin-left: 30px;
+}
+
+/*MI MUSICA*/
+
+
+.cancion1, .cancion2{
+    width: 50%;
+}
+.cancion1 iframe {
+    width: 90%;
+}
+.cancion2 iframe {
+    width: 90%;
+}
+ 
+.canciones{    
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 10px 10px;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/*CONTACTO*/
+
+.formulario {
+  max-width: 50%;
+  margin: 40px auto;
+  padding: 30px;
+}
+
+.formulario h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 28px;
+  color: #2f6d80;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.formulario form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.formulario label {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.formulario input,
+.formulario textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #6aa4b0;
+  border-radius: 8px;
+  background-color: #f5f5f5;
+  font-family: "Quicksand", sans-serif;
+}
+
+.formulario button {
+  background-color: #2f6d80;
+  color: #fff;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  }
+
+.ubicacion iframe {
+  width: 90%;
+  aspect-ratio: 1/1;
+  border: 0;
+  border-radius: 10px;
+  
+}
+
+.ubicacion {
+    width: 50%;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    gap: 10px;
+    margin: 40px auto;
+ }
+
+ .ubicacion h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 28px;
+  color: #2f6d80;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contacto{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start; 
+    justify-content: space-between;
+    width: 85%;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    color: #2b4560;
+    gap: 20px;
+    
+    
+}
+/*FOOTER*/
+
+footer{
+    background-color: #2b4560;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+
+}
+footer img{
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+}
+.iconos {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+}
+
+/*RESPONSIVE*/
+
+
