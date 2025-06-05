@@ -1,0 +1,439 @@
+
+// Variables de colores
+$azulOscuro: #2b4560;
+$azulIntermedio: #2f6d80;
+$azulClaro: #6aa4b0;
+$marfil: #e1e7e0;
+/*Generico*/
+/*Reset CCS*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+/*BODY*/ 
+
+html {
+    height: 100%;
+}
+main {
+
+    flex: 1; 
+}
+
+body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-color:#e1e7e0;
+    font-family: "Quicksand", sans-serif;
+
+    .titulos {
+        color:#2f6d80;
+        font-size: 33px;
+        margin: 20px;
+        text-transform: uppercase ;
+        font-family: "Montserrat", sans-serif;
+    }
+    h1{
+        color:$azulIntermedio ;
+        font-size: 36px;
+        margin: 6px;
+        font-weight: bold;
+
+    }
+    h2{
+        color:$azulOscuro;
+        font-size: 30px;
+        margin: 20px;
+        font-family: "Montserrat", sans-serif;
+
+    }
+    h3{
+        color:$azulOscuro;
+        font-size: 27px;
+        margin: 10px;
+    }
+    h4{
+        color:$azulOscuro;
+        font-size: 20px;
+        margin: 10px; 
+        text-decoration:underline;
+        font-style: italic;
+    }
+    p{
+        color:$azulOscuro;
+        font-size: 18px;
+        margin: 20px
+    }
+}
+
+
+/*HEADER*/
+
+header {
+    background-color: $azulOscuro;
+    .navbarStyle {
+    background-color: $azulOscuro;
+    a{
+    color: $marfil;
+    }
+    img{
+    width: 60px;
+    }
+    }
+    
+}
+@media (max-width:480px) {
+    .navbarStyle {
+    background-color: $azulOscuro;
+}
+}
+
+/*MAIN INICIO*/
+
+.contenedor-grid{
+    display: grid;
+    grid-template-areas:
+    "banner banner banner"
+    "titulo imagen imagen"
+    "texto imagen imagen";
+    grid-template-columns: 50% 25% 25%;
+    grid-template-rows:auto auto auto;
+    padding: 0;
+    gap:0 ;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 0;
+        .grid-banner{
+            grid-area: banner;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            img {
+                display: block;
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+        }
+        .grid-titulo{
+            display: flex;
+            grid-area: titulo;
+            margin: 30px;
+            padding :0px ;
+            align-items: flex-end;
+            h1 {
+  
+                margin: 0px;
+                padding: 0px;
+                line-height: 1;
+                justify-content: baseline;
+            }
+
+        }
+
+        .grid-imagen{
+            grid-area: imagen;
+            grid-row: span 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height:100% ;
+            overflow: hidden;
+            img {
+                width: auto;
+                max-width: 100%;
+                height: 100%;
+                border-radius: 9px;
+                object-fit: cover;
+                margin: 0;
+            }
+        }
+
+        .grid-texto{
+            grid-area: texto;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            margin: 0px 20px;
+            padding: 0;
+
+    }
+}
+@media (max-width: 480px) {
+  .contenedor-grid {
+    grid-template-areas:
+      "banner"
+      "titulo"
+      "imagen"
+      "texto";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+        .grid-titulo, .grid-texto{
+        text-align: center;
+        align-items: center;
+        }
+        .grid-imagen {
+        justify-content: center;
+        }
+  }
+}
+
+/*MAIN INFORMACION*/
+.banner {
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+        border-radius: 0;
+    }
+}
+.libros{
+  display: flex;
+  flex-wrap:wrap;
+  text-align: center;
+  margin: 20px;
+  gap: 20px;
+  justify-items: center;
+  justify-content:space-around;
+    h3{
+        color: #e1e7e0;
+        font-size: 18px;
+    }
+    h4{
+        color: #e1e7e0;
+        font-size: 16px;
+    }
+    a {
+        color:#e1e7e0
+    }
+    p{
+    color: #e1e7e0;
+    font-size: 14px;
+    }
+    img{
+    width: 200px;       
+    height: 200px;      
+    object-fit: fill;  
+    border-radius: 8px; 
+    }
+    .libro1, .libro2, .libro3{
+    justify-content: center;
+    align-items: center;
+    background-color: #2b4560;
+    border-radius: 20px;
+    flex: 1 1 200px;
+    max-width: 300px;
+    }
+}
+
+/*MIS TRABAJOS*/
+.produccionmusical{
+    margin-bottom: 30px;
+    .produccionmusical li {
+    list-style: circle;
+    margin-left:70px ;
+    color:#7e9ab7;
+    font-size: 18px;
+    }
+    .produccionmusical h3{
+    margin-left: 30px;
+}
+}
+
+/*MI MUSICA*/
+
+.canciones{    
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: 10px;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 20px;
+
+    .cancion1, .cancion2{
+        width: calc(50% - 10px);
+        background-color:#e1e7e0;
+        padding: 20px;
+        border-radius: 10px;
+
+        iframe {
+            width: 90%;
+            }
+        }
+}
+
+
+@media (max-width: 480px) {
+    .canciones {
+        flex-direction: column;
+        gap: 15px;
+        margin: 10px;
+        align-items: center;
+        .cancion1, .cancion2{
+            width: 100%;
+            padding: 15px;
+        }
+    }
+    
+}
+
+/*CONTACTO*/
+
+.contacto{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start; 
+    justify-content: space-between;
+    width: 85%;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    color: $azulOscuro;
+    gap: 20px;
+    .formulario {
+         max-width: 50%;
+         margin: 40px auto;
+         padding: 30px;
+            h2 {
+                font-family: "Montserrat", sans-serif;
+                font-size: 28px;
+                color: $azulIntermedio;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            label {
+            font-weight: bold;
+            font-size: 16px;
+            }
+
+        input,
+        textarea {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid $azulClaro;
+            border-radius: 8px;
+            background-color: #f5f5f5;
+            font-family: "Quicksand", sans-serif;
+            }
+
+        button {
+            background-color: $azulIntermedio;
+            color: $marfil;
+            padding: 12px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            }
+    }
+    .ubicacion {
+    width: 50%;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    gap: 10px;
+    margin: 40px auto;
+        h2 {
+            font-family: "Montserrat", sans-serif;
+            font-size: 28px;
+            color: #2f6d80;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        iframe {
+            width: 90%;
+            aspect-ratio: 1/1;
+            border: 0;
+            border-radius: 10px;
+        }
+    }
+    
+}
+
+@media (max-width: 480px) {
+    .contacto {
+        flex-direction: column;
+        padding: 15px;
+        width: 90%;
+        max-width: 2000px;
+
+        .formulario, .ubicacion{
+            width: 100%;
+            padding: 20px;
+            margin: 0 auto;
+            .formulario h2, .ubicacion h2 {
+                font-size: 24px;
+                h2{
+                    font-size: 24px;
+                }
+            }
+    }
+        .formulario {
+            max-width: 100%;
+            
+            input, textarea {
+                font-size: 14px;
+                }
+            button {
+                font-size: 14px;
+                padding:10px;
+                }
+
+        }
+        .ubicacion {
+            flex: 1 1 45%;
+            iframe {
+                width: 100%;
+                aspect-ratio: 1/1;
+            }
+        }
+    }
+}
+
+
+/*FOOTER*/
+
+footer{
+    background-color: $azulOscuro;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0; 
+
+    img {
+        width: 35px;
+        height: 35px;
+        object-fit: contain;
+    }
+        
+    .iconos {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+        justify-content: center;
+    }
+}
+

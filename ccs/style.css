@@ -1,4 +1,4 @@
-/*Paleta de colores:
+ /*Paleta de colores:
 #2b4560 Azul Oscuro
 #2f6d80 Azul mas claro
 #6aa4b0 Azul claro
@@ -69,80 +69,19 @@ p{
     margin: 20px
 }
 /*HEADER*/
-
+.navbarStyle img{
+width: 60px;
+}
+header {
+    background-color: #2b4560;
+}
+.navbarStyle a{
+color: #e1e7e0;
+}
 .navbarStyle {
-     background-color:#2b4560 ; 
-
+    background-color: #2b4560;
 }
 
-.navbarStyle img {
-    height:50px;
-}
-
-/*.navbarStyle .nav-link {
-    color: #ffffff !important;  
-    font-weight: bold;
-}
-
-.navbarStyle .nav-link:hover {
-    color: #cccccc !important; 
-}*/
-
-
-
-.navbarStyle a {
-      align-items:end;
-      justify-content: end;
-      color: #e1e7e0 ;
-     text-decoration: none;
-     font-weight: bold;
-}
-
-/*header {
-   background-color:#2b4560 ; 
-   display: flex;
-   flex-direction:row;
-   justify-content:space-between;  
-   align-items: center;
-   min-height: 60px;
-   box-sizing: border-box;
-   padding: 10px 0;
-   position: sticky;
-   top: 0;
-}
-
-header img {
-    height: 100%;
-    max-height: 60px;
-    width: auto;
-    object-fit: contain;
-    margin: 0 15px;
-}
-header ul{
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items:center;
-    height: 100%;   
-    margin: 0;
-    padding: 0; 
-}
-header ul li {
-    white-space: nowrap;
-    padding: 0 12px;
-}
-header a{
-    color: #e1e7e0 ;
-     text-decoration: none;
-     font-weight: bold;
-}
-
-nav{
-    width: 50%;
-    margin-right: 9px;
-}
-*/
 
 
 /*MAIN*/
@@ -292,7 +231,7 @@ max-width: 300px;
 .produccionmusical li {
     list-style: circle;
     margin-left:70px ;
-    color:#2b4560;
+    color:#7e9ab7;
     font-size: 18px;
 }
 .produccionmusical{
@@ -300,9 +239,6 @@ max-width: 300px;
 }
 .produccionmusical h3{
     margin-left: 30px;
-}
-.acordeon {
- background-color: transparent;
 }
 
 /*MI MUSICA*/
@@ -450,7 +386,7 @@ footer img{
 /*HEADER*/
 
 @media (max-width:480px) {
-    header {
+    /*header {
         flex-direction: column;
         min-height:80px;
         margin 0;
@@ -480,7 +416,11 @@ footer img{
       height: 50px;
       align-items: center;
 }
+    .
 
+}*/
+.navbarStyle {
+    background-color: #2b4560s;
 }
 
 /*INDEX / MAIN*/ 
@@ -548,9 +488,7 @@ footer img{
         font-size: 14px;
         padding:10px;
     }
-    .contacto {
-        max-width: 2000px;
-    }
+
     .ubicacion {
         flex: 1 1 45%;
     }
