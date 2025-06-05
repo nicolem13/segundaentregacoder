@@ -11,9 +11,6 @@
     padding: 0;
     box-sizing: border-box
 }
-
-
-
 /*BODY*/ 
 
 html {
@@ -44,6 +41,7 @@ h1{
     color:#2f6d80 ;
     font-size: 36px;
     margin: 6px;
+    font-weight: bold;
 
 }
 h2{
@@ -72,7 +70,35 @@ p{
 }
 /*HEADER*/
 
-header {
+.navbarStyle {
+     background-color:#2b4560 ; 
+
+}
+
+.navbarStyle img {
+    height:50px;
+}
+
+/*.navbarStyle .nav-link {
+    color: #ffffff !important;  
+    font-weight: bold;
+}
+
+.navbarStyle .nav-link:hover {
+    color: #cccccc !important; 
+}*/
+
+
+
+.navbarStyle a {
+      align-items:end;
+      justify-content: end;
+      color: #e1e7e0 ;
+     text-decoration: none;
+     font-weight: bold;
+}
+
+/*header {
    background-color:#2b4560 ; 
    display: flex;
    flex-direction:row;
@@ -81,6 +107,8 @@ header {
    min-height: 60px;
    box-sizing: border-box;
    padding: 10px 0;
+   position: sticky;
+   top: 0;
 }
 
 header img {
@@ -114,36 +142,8 @@ nav{
     width: 50%;
     margin-right: 9px;
 }
-.menu{
-    font-size:15px;
-}
+*/
 
-.menu-icon {
-    display: none;
-    font-size: 30px;
-    cursor: pointer;
-    color: #e1e7e0;
-    padding: 0 15px;
-}
-
-#menu-toggle {
-    display: none;
-}
-
-/*RESPONSIVE HAMBURGUESA*/
-@media (max-width: 768px) {
-    nav {
-        display: none; /* ocultamos el nav real */
-    }
-
-    .menu-icon {
-        display: block;
-    }
-
-    header {
-        justify-content: space-between;
-    }
-}
 
 /*MAIN*/
 
@@ -176,9 +176,23 @@ nav{
     overflow: hidden;
 }
 .grid-titulo{
+    display: flex;
     grid-area: titulo;
     margin: 30px;
+    padding :0px ;
+    align-items: end;
+    
+
 }
+.grid-titulo h1 {
+  
+    margin: 0px;
+    padding: 0px;
+    line-height: 1;
+    justify-content: baseline;
+    
+}
+
 .grid-imagen{
     grid-area: imagen;
     grid-row: span 2;
@@ -194,8 +208,9 @@ nav{
     grid-area: texto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    margin: 20px;
+    justify-content: flex-start;
+    margin: 0px 20px;
+    padding: 0;
 
 }
 
@@ -213,27 +228,6 @@ nav{
     object-fit: cover;
     margin:0;
 }
-
-@media (max-width: 768px) {
-  .contenedor-grid {
-    grid-template-areas:
-      "banner"
-      "titulo"
-      "imagen"
-      "texto";
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-  }
-
-  .grid-titulo, .grid-texto{
-    text-align: center;
-    align-items: center;
-  }
-  .grid-imagen {
-    justify-content: center;
-  }
-}
-
 
 /*MAIN INFORMACION*/
 
@@ -259,6 +253,8 @@ nav{
   text-align: center;
   margin: 20px;
   gap: 20px;
+  justify-items: center;
+  justify-content:space-around
 }
 .libros h3{
     color: #e1e7e0;
@@ -305,12 +301,18 @@ max-width: 300px;
 .produccionmusical h3{
     margin-left: 30px;
 }
+.acordeon {
+ background-color: transparent;
+}
 
 /*MI MUSICA*/
 
 
 .cancion1, .cancion2{
-    width: 50%;
+    width: calc(50% - 10px);
+    background-color:#e1e7e0;
+    padding: 20px;
+    border-radius: 10px;
 }
 .cancion1 iframe {
     width: 90%;
@@ -325,7 +327,8 @@ max-width: 300px;
     text-align: center;
     margin: 10px 10px;
     gap: 20px;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: flex-end;
     margin-bottom: 20px;
 }
 
@@ -444,4 +447,111 @@ footer img{
 
 /*RESPONSIVE*/
 
+/*HEADER*/
 
+@media (max-width:480px) {
+    header {
+        flex-direction: column;
+        min-height:80px;
+        margin 0;
+        padding: 0;
+    }
+    nav {
+        width: 100%;
+    }
+   nav ul{
+        align-items:start
+    }
+    nav ul li {
+        font-size: 10px;
+        align-items: start;
+        margin bottom: 15px;
+        padding: 0;
+    }
+    header img {
+        height: 100%;
+        margin: 0;
+        padding: 0;      
+    }
+    .logo-header {
+      margin-bottom: 0px;
+      margin-top: 3px;
+      padding: 0;
+      height: 50px;
+      align-items: center;
+}
+
+}
+
+/*INDEX / MAIN*/ 
+
+
+@media (max-width: 480px) {
+  .contenedor-grid {
+    grid-template-areas:
+      "banner"
+      "titulo"
+      "imagen"
+      "texto";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .grid-titulo, .grid-texto{
+    text-align: center;
+    align-items: center;
+  }
+  .grid-imagen {
+    justify-content: center;
+  }
+}
+
+/* MI MUSICA / MAIN*/
+@media (max-width: 480px) {
+    .canciones {
+        flex-direction: column;
+        gap: 15px;
+        margin: 10px;
+        align-items: center;
+    }
+    .cancion1, .cancion2{
+        width: 100%;
+        padding: 15px;
+    }
+}
+/*CONTACTO*/
+@media (max-width: 480px) {
+    .contacto {
+        flex-direction: column;
+        padding: 15px;
+        width: 90%;
+    }
+    .formulario, .ubicacion{
+        width: 100%;
+        padding: 20px;
+        margin: 0 auto;
+    }
+    .formulario {
+        max-width: 100%;
+    }
+    .ubicacion iframe {
+        width: 100%;
+        aspect-ratio: 1/1;
+    }
+    .formulario h2, .ubicacion h2 {
+        font-size: 24px;
+    }
+    .formulario input, .formulario textarea {
+        font-size: 14 px;
+    }
+    .formulario button {
+        font-size: 14px;
+        padding:10px;
+    }
+    .contacto {
+        max-width: 2000px;
+    }
+    .ubicacion {
+        flex: 1 1 45%;
+    }
+}
