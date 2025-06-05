@@ -70,6 +70,18 @@ header .navbarStyle {
 }
 header .navbarStyle a {
   color: #e1e7e0;
+  text-decoration: none;
+  transition: font-weight 0.3s ease, color 0.3s ease;
+}
+header .navbarStyle a.nav-link {
+  color: white;
+  font-weight: normal;
+}
+header .navbarStyle a.nav-link.active, header .navbarStyle a.nav-link:hover {
+  font-weight: bold;
+  color: white;
+  transform: scale(1);
+  transition: transform 0.1s ease;
 }
 header .navbarStyle img {
   width: 60px;
@@ -78,6 +90,9 @@ header .navbarStyle img {
 @media (max-width: 480px) {
   .navbarStyle {
     background-color: #2b4560;
+  }
+  .navbarStyle .navbar-toggler-icon {
+    filter: invert(1);
   }
 }
 /*MAIN INICIO*/
@@ -205,7 +220,7 @@ header .navbarStyle img {
 .libros .libro1, .libros .libro2, .libros .libro3 {
   justify-content: center;
   align-items: center;
-  background-color: #2b4560;
+  background-image: linear-gradient(to bottom, #2b4560, #6aa4b0);
   border-radius: 20px;
   flex: 1 1 200px;
   max-width: 300px;
@@ -385,6 +400,10 @@ footer img {
   width: 35px;
   height: 35px;
   object-fit: contain;
+}
+footer img:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s ease;
 }
 footer .iconos {
   display: flex;
