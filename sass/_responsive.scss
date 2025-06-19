@@ -1,0 +1,90 @@
+/*inicio*/
+@media (max-width:480px){
+   
+    .contenedor-grid {
+        grid-template-areas:
+         "banner"
+         "titulo"
+         "imagen"
+         "texto";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        .grid-titulo, .grid-texto{
+        text-align: center;
+        align-items: center;
+        }
+        .grid-imagen {
+        justify-content: center;
+        }
+    }
+   
+}
+
+/*header*/
+
+@media (max-widht:480px) {
+    .navbarStyle {
+        background:#e1e7e0;
+        .navbar-toggler-icon {
+            filter: invert(1);
+        }
+    }
+    
+}
+
+/*musica*/ 
+
+@media (max-width: 480px) {
+    .canciones {
+        flex-direction: column;
+        gap: 15px;
+        margin: 10px;
+        align-items: center;
+        .cancion1, .cancion2{
+            width: 100%;
+            padding: 15px;
+        }
+    }
+    
+}
+
+/*Contacto*/ 
+@media (max-width: 480px) {
+    .contacto {
+        flex-direction: column;
+        padding: 15px;
+        width: 90%;
+        max-width: 2000px;
+
+        .formulario, .ubicacion{
+            width: 100%;
+            padding: 20px;
+            margin: 0 auto;
+            .formulario h2, .ubicacion h2 {
+                font-size: 24px;
+                h2{
+                    font-size: 24px;
+                }
+            }
+    }
+        .formulario {
+            max-width: 100%;
+            
+            input, textarea {
+                font-size: 14px;
+                }
+            button {
+                font-size: 14px;
+                padding:10px;
+                }
+
+        }
+        .ubicacion {
+            flex: 1 1 45%;
+            iframe {
+                width: 100%;
+                aspect-ratio: 1/1;
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+
+.navbarStyle {
+    background-color:#2b4560;
+    img {
+        width: 60px;
+    }
+    a {
+        color: #e1e7e0;
+        text-decoration: none;
+        transition: font-weight 0.3s ease, color 0.3s ease0;
+
+        &.nav-link {
+            color:#e1e7e0;
+            font-weight: normal;
+            &.active, &:hover {
+                font-weight: bold;
+                color: #e1e7e0;
+                transform: scale(1.0);
+                transition: transform 0.1s ease;
+            }
+        }
+    }
+    img {
+        width: 60px;
+    }
+ }
